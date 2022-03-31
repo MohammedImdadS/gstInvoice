@@ -1,2 +1,4 @@
 # gstInvoice Desktop Application for MD
-Using controlfx package for and MySQLconnection
+Use controlsfx.jar file for javafx.
+Use MySQL connection file for database connection
+
