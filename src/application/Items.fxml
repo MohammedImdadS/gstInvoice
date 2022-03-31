@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="686.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ItemsController">
+   <children>
+      <ScrollPane layoutX="2.0" layoutY="59.0" prefHeight="626.0" prefWidth="1154.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="632.0" prefWidth="1149.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="25.0" text="Add New Items">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="itemsID" layoutX="14.0" layoutY="100.0" prefHeight="17.0" prefWidth="58.0" text="    ID" />
+                  <TextField fx:id="itemsItemName" alignment="CENTER" layoutX="62.0" layoutY="99.0" prefHeight="25.0" prefWidth="254.0" promptText="Description Of Goods" />
+                  <TextField fx:id="itemsHSNNumber" alignment="CENTER" layoutX="316.0" layoutY="99.0" prefHeight="25.0" prefWidth="66.0" promptText="HSN" />
+                  <ChoiceBox fx:id="unit" layoutX="382.0" layoutY="99.0" prefHeight="26.0" prefWidth="60.0" />
+                  <ChoiceBox fx:id="gstRate" layoutX="442.0" layoutY="99.0" prefHeight="26.0" prefWidth="67.0" />
+                  <TextField fx:id="itemsCostPrice" alignment="CENTER" layoutX="509.0" layoutY="99.0" prefHeight="26.0" prefWidth="73.0" promptText="Rate" />
+                  <TextField fx:id="itemsSellingPrice" alignment="CENTER" layoutX="583.0" layoutY="100.0" prefHeight="26.0" prefWidth="67.0" promptText="MRP" />
+                  <TextField fx:id="itemsStock" layoutX="1075.0" layoutY="100.0" prefHeight="26.0" prefWidth="58.0" promptText="stock" />
+                  <Label fx:id="itemsDiscValue" layoutX="666.0" layoutY="109.0" prefHeight="17.0" prefWidth="70.0" text="calculated" />
+                  <Label fx:id="itemsTaxable" layoutX="758.0" layoutY="109.0" prefHeight="17.0" prefWidth="70.0" text="calculated" />
+                  <Label fx:id="itemsCGST" layoutX="842.0" layoutY="109.0" prefHeight="17.0" prefWidth="70.0" text="calculated" />
+                  <Label fx:id="itemsSGST" layoutX="926.0" layoutY="109.0" prefHeight="17.0" prefWidth="65.0" text="calculated" />
+                  <Button fx:id="billinSaveAndPrintButton" layoutX="1030.0" layoutY="60.0" mnemonicParsing="false" onAction="#itemsAdditems" text="Add Item" />
+                  <TableView fx:id="table" layoutX="14.0" layoutY="125.0" prefHeight="464.0" prefWidth="1125.0">
+                     <columns>
+                        <TableColumn fx:id="collmItemsID" prefWidth="56.00004577636719" text="ID" />
+                        <TableColumn fx:id="collName" prefWidth="247.99998474121094" text="Description Of Goods" />
+                        <TableColumn fx:id="collHSNNumber" prefWidth="64.0" text="HSN" />
+                        <TableColumn fx:id="collUnit" prefWidth="62.0" text="Unit" />
+                        <TableColumn fx:id="collGstRate" prefWidth="68.0" text="GST" />
+                        <TableColumn fx:id="collCostPrice" prefWidth="73.0" text="Rate" />
+                        <TableColumn fx:id="collSellingPrice" prefWidth="70.0" text="MRP" />
+                        <TableColumn fx:id="collDiscValue" prefWidth="88.0" text="DiscValue" />
+                        <TableColumn fx:id="collTaxable" prefWidth="91.0" text="Taxable" />
+                        <TableColumn fx:id="collCGST" prefWidth="82.0" text="CGST" />
+                        <TableColumn fx:id="collSGST" prefWidth="82.0" text="SGST" />
+                        <TableColumn fx:id="collIGST" prefWidth="70.0" text="IGST" />
+                        <TableColumn fx:id="collStock" prefWidth="68.0" text="Stock" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="952.0" layoutY="60.0" mnemonicParsing="false" onAction="#deleteItems" text="Delete Item" />
+                  <Button layoutX="870.0" layoutY="60.0" mnemonicParsing="false" onAction="#editItems" prefHeight="26.0" prefWidth="82.0" text="Edit Item" />
+                  <Button layoutX="814.0" layoutY="60.0" mnemonicParsing="false" onAction="#refreshTableData" text="Refresh" />
+                  <Label fx:id="itemsIGST" layoutX="1006.0" layoutY="109.0" prefHeight="17.0" prefWidth="56.0" text="calculated" />
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <Label layoutX="8.0" layoutY="14.0" text="Items List">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

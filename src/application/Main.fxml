@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorInput?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.1686143572621035" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="82.0">
+         <children>
+            <ImageView fitHeight="78.0" fitWidth="175.0" layoutX="12.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ButtonBilling" layoutX="3.0" layoutY="175.0" mnemonicParsing="false" onAction="#ButtonBilling" prefWidth="180.0" text="Billing" />
+            <Button fx:id="ButtonPurchase" layoutX="3.0" layoutY="207.0" mnemonicParsing="false" onAction="#ButtonPurchase" prefWidth="180.0" text="Purchase" />
+            <Button fx:id="buttonCustomer" layoutX="3.0" layoutY="239.0" mnemonicParsing="false" onAction="#ButtonCustomer" prefWidth="180.0" text="Customer" />
+            <Button fx:id="buttonItems" layoutX="3.0" layoutY="273.0" mnemonicParsing="false" onAction="#ButtonItems" prefWidth="180.0" text="Items" />
+            <Button fx:id="buttonDealer" layoutX="3.0" layoutY="307.0" mnemonicParsing="false" onAction="#ButtonDealer" prefWidth="180.0" text="Dealer" />
+            <Button fx:id="buttonReports" layoutX="3.0" layoutY="342.0" mnemonicParsing="false" onAction="#ButtonReports" prefWidth="180.0" text="Reports" />
+            <Button fx:id="ButtonCompany" layoutX="3.0" layoutY="374.0" mnemonicParsing="false" onAction="#ButtonCompanyDeails" prefWidth="180.0" text="Company Details" />
+         </children></AnchorPane>
+    <AnchorPane fx:id="anchorPane1" minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="739.0">
+         <children>
+            <ImageView fitHeight="698.0" fitWidth="798.0" layoutX="164.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@front.png" />
+               </image>
+               <effect>
+                  <Blend mode="ADD">
+                     <topInput>
+                        <ColorInput />
+                     </topInput></Blend>
+               </effect>
+            </ImageView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>
